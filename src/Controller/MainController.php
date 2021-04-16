@@ -3,25 +3,32 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
-    #[Route('/test', name: 'test')]
-    public function index(): Response
+
+    #[Route('/ressource', name: 'ressource')]
+    public function redirectIndex(): Response
     {
-        return $this->render('test/index.html.twig', [
-            'controller_name' => 'MainController',
-        ]);
+        return new RedirectResponse("/ressources");
     }
 
     #[Route('/', name: 'home')]
     public function home(): Response
     {
-        return $this->render('test/home.html.twig', [
-            'title' => "Coucou bande de connards",
-            'age' => 102
+        return new RedirectResponse("/ressources");
+    }
+
+    #[Route('/ressources', name: 'ressources')]
+    public function index(): Response
+    {
+        return $this->render('ressources/index.html.twig', [
+
         ]);
     }
+
+
 }

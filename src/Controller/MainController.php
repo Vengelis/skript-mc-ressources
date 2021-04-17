@@ -26,8 +26,21 @@ class MainController extends AbstractController
     public function index(): Response
     {
         return $this->render('ressources/index.html.twig', [
-
+            'page_name' => "Ressources"
         ]);
+    }
+
+    #[Route('/ressources/view/{route}', name: 'indexView')]
+    public function indexView($route = null): Response
+    {
+        if(isset($route)){
+            return $this->render('ressources/view/index.html.twig', [
+                'page_name' => $route
+            ]);
+        } else {
+            return new RedirectResponse("/ressources");
+        }
+
     }
 
 

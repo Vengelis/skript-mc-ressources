@@ -1,0 +1,11 @@
+knpu_oauth2_client:
+    clients:
+        invision:
+            type: generic
+            provider_class: Romitou\OAuth2\Client\InvisionProvider
+            client_id: '%env(OAUTH_ID)%'
+            client_secret: '%env(OAUTH_SECRET)%'
+            provider_options:
+                baseUrl: '%env(OAUTH_BASE_URL)%'
+            redirect_route: invision_authenticate
+            redirect_params: {}

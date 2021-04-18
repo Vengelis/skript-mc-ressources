@@ -30,14 +30,18 @@ class MainController extends AbstractController
         ]);
     }
 
-    #[Route('/ressources/view/{route}', name: 'indexView')]
-    public function indexView($route = null): Response
+    #[Route('/ressources/view/{route}/{subRouting}', name: 'indexView')]
+    public function indexView($route = null, $subRouting = null): Response
     {
-        if(isset($route)){
-            return $this->render('ressources/view/index.html.twig', [
+        if(isset($route) && !isset($subRouting)){
+            return $this->render('ressources/view/overview.html.twig', [
                 'page_name' => $route
             ]);
-        } else {
+        } elseif(isset($route) && isset($subRouting)){
+            return $this->render('ressources/view/'.$subRouting.'.html.twig', [
+                'page_name' => $route." ".$subRouting
+            ]);
+        } else{
             return new RedirectResponse("/ressources");
         }
 

@@ -41,12 +41,12 @@
                                                         <img class="w-16 h-16 flex-shrink-0 mx-auto bg-gray-700 rounded-lg" src="https://skript-mc.fr/forum/uploads/monthly_2018_08/logo.png.4f281b9a7a031def7e7bca6ef69ec264.png" alt="">
                                                     </div>
                                                     <div class="ml-4">
-                                                        <h3 class="text-2xl leading-6 font-medium flex">
+                                                        <div class="text-2xl leading-6 font-medium flex items-center">
                                                             <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-500 text-white mr-2">
                                                               Addon
                                                             </span>
-                                                            <p>Ressource 1 - Gros titre ici</p>
-                                                        </h3>
+                                                            <h3 class="mb-1">Ressource 1 - Gros titre ici</h3>
+                                                        </div>
                                                         <p class="text-sm text-gray-400">
                                                             <a href="#">
                                                                 Une plus longue description pour détailler très vite fait la ressource
@@ -82,7 +82,7 @@
                                                     Description
                                                 </a>
                                                 <a href="http://127.0.0.1:8000/ressources/view/1/update" class="border-transparent text-gray-300 hover:text-gray-500 hover:border-gray-200 whitespace-nowrap flex py-4 px-1 border-b-2 font-medium text-sm">
-                                                    Mises à jours
+                                                    Mises à jour
                                                     <span class="bg-gray-500 text-white hidden ml-3 py-0.5 px-2.5 rounded-full text-xs font-medium md:inline-block">6</span>
                                                 </a>
                                                 <a href="http://127.0.0.1:8000/ressources/view/1/review" class="border-transparent text-gray-300 hover:text-gray-500 hover:border-gray-200 whitespace-nowrap flex py-4 px-1 border-b-2 font-medium text-sm" aria-current="page">
@@ -175,7 +175,12 @@
                                                 Note globale
                                             </div>
                                             <div class="w-1/2 text-right">
-                                                ⭐⭐⭐⭐ <i class="text-gray-400">5 avis</i>
+                                                <i class="fa fa-star text-yellow-500"></i>
+                                                <i class="fa fa-star text-yellow-500"></i>
+                                                <i class="fa fa-star text-yellow-500"></i>
+                                                <i class="fa fa-star text-yellow-500"></i>
+                                                <i class="fa fa-star text-gray-500"></i>
+                                                <p class="text-gray-400">(12 avis)</p>
                                             </div>
                                         </div>
                                     </nav>
@@ -242,8 +247,20 @@
                                             <div class="w-1/2 text-left">
                                                 Wiki:
                                             </div>
-                                            <a class="w-1/2 text-right">
-                                                <a href="#">Github</a>
+                                            <a href="#" class="w-1/2 text-green-300 flex flex-row-reverse items-center">
+                                                <p class="">Github</p>
+                                                <i class="fa fa-share mx-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <div class="flex text-white text-sm mt-1">
+                                            <div class="w-1/2 text-left">
+                                                Discord propriétaire:
+                                            </div>
+                                            <a href="#" class="w-1/2 text-blue-400 flex flex-row-reverse items-center">
+                                                <p class="">Discord</p>
+                                                <i class="fab fa-discord mx-1"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -256,7 +273,7 @@
                                                 <ul class="w-full text-right">
                                                     <li><a href="#">Romain</a></li>
                                                     <li><a href="#">Michel</a></li>
-                                                    <li><i>Jean-Pierre</i></li>
+                                                    <li><a class="text-gray-400">Jean-Pierre</a></li>
                                                     <li><a href="#">Marco Polo</a></li>
                                                 </ul>
                                             </a>
